@@ -35,7 +35,7 @@ public class ejercicio02 {
 		med = med / 4;
 		System.out.println("La nota media de la pelicula 2 es: "+med);
 		//valor mas alto de la tercera
-		double z = 0;
+		double z = 0; //jaja
 		for(int b = 0;b<4;b++) {
 			if(z < notas[2][b]) {
 				z = notas[2][b];

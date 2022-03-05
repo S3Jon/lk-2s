@@ -29,7 +29,7 @@ public class ejercicio2intTable {
 		double med = (double)IntStream.of(notas[1]).sum()/notas[1].length; //casteo la suma como double por lo cual mantengo decimales
 		System.out.println("La nota media de la pelicula 2 es: "+med);
 		//valor mas alto de la tercera
-		int z = 0;
+		int z = 0; //test
 		for(int b = 1;b<4;b++) {
 			if(z < notas[2][b]) {
 				z = notas[2][b];
