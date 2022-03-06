@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /**
- *
+ *	score: 5/5
  * @author J4mes
  */
 public class ejercicio01 {

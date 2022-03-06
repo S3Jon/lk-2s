@@ -6,7 +6,7 @@ package actividad02;
 import java.io.IOException;
 import java.util.*;
 /**
- *
+ * score 5/5
  * @author J4mes
  */
 public class ejercicio02 {
