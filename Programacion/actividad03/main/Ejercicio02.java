@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import actividad03.introduceDatos.pregunta;
 import actividad03.operaciones.OperacionesLinkia;
+import actividad03.operaciones.Valores;
 import introduceDatos.*;
 
 public class Ejercicio02 {
@@ -18,6 +19,11 @@ public class Ejercicio02 {
 			}while(opElegida < 0 || opElegida > 4);
 			if(opElegida == 1) {
 				OperacionesLinkia.convertirLinkiaCoins();
+			}
+			if(opElegida == 2) {
+				Valores.muestraPi();
+				Valores.muestraValorAbsoluto();
+				Valores.muestraValorAleatorio();
 			}
 			//System.out.println("XD"); //debug
 		}while(opElegida != 0);
