@@ -7,7 +7,6 @@ import actividad03.operaciones.OperacionesLinkia;
 import actividad03.operaciones.Valores;
 import actividad03.operaciones.aritmeticas.Operaciones;
 import actividad03.operaciones.geometricas.*; // WIP
-import introduceDatos.*;
 
 public class Ejercicio02 {
 	public static void main(String[] args) throws IOException {
