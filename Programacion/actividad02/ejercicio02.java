@@ -18,10 +18,22 @@ public class ejercicio02 {
 	 public static void stMenu() throws IOException {
 		 int n;
 		 String notas[][] = new String[4][4];
-		 notas[0][0] = "M01"; notas[1][0] = "M02"; notas[2][0] = "M03"; notas[3][0] = "M04";
-		 notas[0][1] = "8"; notas[1][1] = "3"; notas[2][1] = "9"; notas[3][1] = "10";
-		 notas[0][2] = "5"; notas[1][2] = "8"; notas[2][2] = "7"; notas[3][2] = "4";
-		 notas[0][3] = "10"; notas[1][3] = "9"; notas[2][3] = "6"; notas[3][3] = "9";
+		 notas[0][0] = "M01"; 
+		 notas[1][0] = "M02"; 
+		 notas[2][0] = "M03"; 
+		 notas[3][0] = "M04";
+		 notas[0][1] = "8"; 
+		 notas[1][1] = "3"; 
+		 notas[2][1] = "9"; 
+		 notas[3][1] = "10";
+		 notas[0][2] = "5"; 
+		 notas[1][2] = "8"; 
+		 notas[2][2] = "7"; 
+		 notas[3][2] = "4";
+		 notas[0][3] = "10"; 
+		 notas[1][3] = "9"; 
+		 notas[2][3] = "6"; 
+		 notas[3][3] = "9";
 		 System.out.println("Los valores del array bidimensional son:");
 		 for(int j=0;j<4;j++) {
 			 System.out.println(notas[j][0]+" "+notas[j][1]+" "+notas[j][2]+" "+notas[j][3]);
