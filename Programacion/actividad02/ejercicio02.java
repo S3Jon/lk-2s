@@ -72,7 +72,9 @@ public class ejercicio02 {
 				 
 			 }
 			 if(n == 3) {
-				 int z; int v; int y;
+				 int z; 
+				 int v; 
+				 int y;
 				 //Scanner scaner = new Scanner(System.in);
 				 do {
 					System.out.print("Introduce el numero de asignatura (entre 0 y 3) de la que quieres cambiar el valor:");
