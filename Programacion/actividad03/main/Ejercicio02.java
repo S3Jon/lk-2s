@@ -6,6 +6,7 @@ import actividad03.introduceDatos.pregunta;
 import actividad03.operaciones.OperacionesLinkia;
 import actividad03.operaciones.Valores;
 import actividad03.operaciones.aritmeticas.Operaciones;
+import actividad03.operaciones.geometricas.*; // WIP
 import introduceDatos.*;
 
 public class Ejercicio02 {
@@ -41,6 +42,10 @@ public class Ejercicio02 {
 				b = pregunta.pideDouble();
 				Operaciones.calculaPotencia(a, b);
 			}
+			if(opElegida == 7)
+				actividad03.operaciones.geometricas.Operaciones.muestraSeno();
+			if(opElegida == 8)
+				actividad03.operaciones.geometricas.Operaciones.muestraCoseno();
 		}while(opElegida != 0);
 	}
 	
@@ -51,6 +56,8 @@ public class Ejercicio02 {
 		System.out.println("4- Muestra un valor aleatorio con el rango elegido.");
 		System.out.println("5- Calcular el logaritmo neperiano de un número");
 		System.out.println("6- Calcular un valor elevado a otro.");
+		System.out.println("7- Calcular el seno de un numero.");
+		System.out.println("8- Calcular el coseno de un numero.");
 		System.out.println("0- Salir.");
 		System.out.print("¿Qué quieres hacer?: ");
 	}
