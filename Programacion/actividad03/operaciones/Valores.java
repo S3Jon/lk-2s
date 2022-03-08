@@ -1,7 +1,6 @@
 package actividad03.operaciones;
 
-import Java.lang.math;
-import actividad03.introduceDatos.pregunta;
+import actividad03.introduceDatos.pregunta; 
 
 public class Valores {
 	public static void muestraPi() {
