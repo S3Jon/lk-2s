@@ -9,7 +9,7 @@ public class OperacionesLinkia {
 		double m = 0;
 		n = pregunta.pideDouble();
 		m = n * 1.5;
-		System.out.println(n+" leuros equivalen a "+m+" LinkiaCoins");
+		System.out.println(n+" euros equivalen a "+m+" LinkiaCoins");
 	}
 
 }
