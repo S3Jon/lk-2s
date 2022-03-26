@@ -8,7 +8,7 @@ public class Ejercicio01 {
 		do {
 			do {
 				imprimirMenu();
-				//opElegida = pregunta.pideEntero();
+				opElegida = pregunta.pideEntero();
 			}while(opElegida < 0 || opElegida > 6);
 			//opcionElegida(opElegida);
 		}while(opElegida != 0);
@@ -23,5 +23,11 @@ public class Ejercicio01 {
 		System.out.println("6- Reemplazar caracteres de un Archivo utilizando RandomAccessFile");
 		System.out.println("0- Salir.");
 		System.out.print("¿Qué quieres hacer?: ");
+	}
+	
+	public static int pideEntero() { //pide un int al usuario
+		Scanner sc=new Scanner(System.in);
+		int n = sc.nextInt();
+		return (n);
 	}
 }
