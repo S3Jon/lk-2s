@@ -6,8 +6,9 @@ import java.util.*;
 public class Ejercicio01 {
 	public static void main(String[] args) throws IOException { //main
 		int opElegida = 100;
-		//System.out.println("Working Directory = " + System.getProperty("user.dir"));  testeando el user.dir
-		File archivos = new File("archivos"); // crea la carpeta archivos
+		System.out.println("Working Directory = " + System.getProperty("user.dir")); //  testeando el user.dir
+		File archivos = new File("archivos"); // Nombre carpeta
+		archivos.mkdir();					  // crea la carpeta
 		do {
 			do {
 				imprimirMenu();
@@ -35,6 +36,6 @@ public class Ejercicio01 {
 	}
 
 	public static void createNewFile() {
-
+		
 	}
 }
