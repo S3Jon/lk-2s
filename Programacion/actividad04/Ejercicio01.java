@@ -1,14 +1,17 @@
 package actividad04;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
 
 public class Ejercicio01 {
 	public static void main(String[] args) throws IOException { //main
 		int opElegida = 100;
+		//System.out.println("Working Directory = " + System.getProperty("user.dir"));  testeando el user.dir
+		File archivos = new File("archivos"); // crea la carpeta archivos
 		do {
 			do {
 				imprimirMenu();
-				opElegida = pregunta.pideEntero();
+				opElegida = pideEntero();
 			}while(opElegida < 0 || opElegida > 6);
 			//opcionElegida(opElegida);
 		}while(opElegida != 0);
@@ -29,5 +32,9 @@ public class Ejercicio01 {
 		Scanner sc=new Scanner(System.in);
 		int n = sc.nextInt();
 		return (n);
+	}
+
+	public static void createNewFile() {
+
 	}
 }
