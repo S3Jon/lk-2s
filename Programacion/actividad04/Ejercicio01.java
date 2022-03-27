@@ -56,10 +56,17 @@ public class Ejercicio01 {
 
 	public static void createNewFile(String path) throws IOException {
 		String nmbre;
+		String txt;
 		nmbre = pideNombre();
 		File nombre = new File(path+File.separator+nmbre+".txt");
 		nombre.createNewFile();
-		
+		System.out.print("¿Qué quiere introducir en el archivo?: ");
+		Scanner scan = new Scanner(System.in);
+		txt = scan.nextLine();
+		System.out.println(txt);
+		BufferedWriter out = new BufferedWriter(new FileWriter(path+File.separator+nmbre+".txt", true));
+		out.write(txt);
+		out.close();
 	}
 	
 	public static String[] listFiles(String path) {
