@@ -21,8 +21,8 @@ public class Ejercicio01 {
 				createNewFile(path);
 			if(opElegida == 2)
 				listFiles(path);
-			//if(opElegida == 3)
-				//
+			if(opElegida == 3)
+				shFile(path);
 			if(opElegida == 4)
 				dlFile(path);
 		}while(opElegida != 0);
@@ -73,8 +73,21 @@ public class Ejercicio01 {
 		System.out.println("------ Fin de la lista ------");
 		return(pnames);
 	}
-	public static void shFile(String path) {
-		
+	public static void shFile(String path) throws IOException {
+		String Nombre;
+		int numero = 0;
+		String[] pnames = listFiles(path);
+		System.out.print("¿Que archivo quieres leer?: ");
+		Scanner scan = new Scanner(System.in);
+		numero = scan.nextInt() - 1;
+		Nombre = pnames[numero];
+		try (BufferedReader br = new BufferedReader(new FileReader(path+File.separator+Nombre))) {
+			   String line;
+			   while ((line = br.readLine()) != null) {
+			       System.out.println(line);
+			   }
+			}
+		System.out.println("------ Fin del archivo ------");
 	}
 	public static void dlFile(String path) {
 		String Nombre;
