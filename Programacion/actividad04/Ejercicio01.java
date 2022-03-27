@@ -21,6 +21,10 @@ public class Ejercicio01 {
 				createNewFile(path);
 			if(opElegida == 2)
 				listFiles(path);
+			//if(opElegida == 3)
+				//
+			if(opElegida == 4)
+				dlFile(path);
 		}while(opElegida != 0);
 	}
 	
@@ -56,7 +60,7 @@ public class Ejercicio01 {
 		
 	}
 	
-	public static void listFiles(String path) {
+	public static String[] listFiles(String path) {
 		String[] pnames;
 		File f = new File(path);
 		pnames = f.list();
@@ -66,5 +70,30 @@ public class Ejercicio01 {
 			System.out.println(n+"-"+pname);
 			n++;
 		}
+		System.out.println("------ Fin de la lista ------");
+		return(pnames);
+	}
+	public static void shFile(String path) {
+		
+	}
+	public static void dlFile(String path) {
+		String Nombre;
+		int numero = 0;
+		String[] pnames = listFiles(path);
+		System.out.print("¿Que archivo quieres borrar?: ");
+		Scanner scan = new Scanner(System.in);
+		numero = scan.nextInt() - 1;
+		Nombre = pnames[numero];
+		File myfile = new File(path+File.separator+Nombre);
+		if(myfile.delete())
+	         System.out.println("Archivo borrado exitosamente");
+	      else
+	         System.out.println("Algo ha salido mal");
+	}
+	public static void rnFile(String path) {
+		
+	}
+	public static void rpFile(String path) {
+		
 	}
 }
