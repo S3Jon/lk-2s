@@ -6,7 +6,7 @@ import java.util.*;
 public class Ejercicio01 {
 	public static void main(String[] args) throws IOException { //main
 		int opElegida = 100;
-		System.out.println("Working Directory = " + System.getProperty("user.dir")); //  testeando el user.dir
+		//System.out.println("Working Directory = " + System.getProperty("user.dir")); //  testeando el user.dir
 		File archivos = new File("archivos"); // Nombre carpeta
 		archivos.mkdir();					  // crea la carpeta
 		String local = System.getProperty("user.dir");
@@ -25,6 +25,8 @@ public class Ejercicio01 {
 				shFile(path);
 			if(opElegida == 4)
 				dlFile(path);
+			if(opElegida == 5)
+				rnFile(path);
 		}while(opElegida != 0);
 	}
 	
@@ -103,8 +105,26 @@ public class Ejercicio01 {
 	      else
 	         System.out.println("Algo ha salido mal");
 	}
-	public static void rnFile(String path) {
-		
+	public static void rnFile(String path) throws IOException {
+		String Nombre;
+		String Nombre2;
+		int numero = 0;
+		String[] pnames = listFiles(path);
+		System.out.print("¿Que archivo quieres renombrar?: ");
+		Scanner scan = new Scanner(System.in);
+		numero = scan.nextInt() - 1;
+		Nombre = pnames[numero];
+		File myfile = new File(path+File.separator+Nombre);
+		System.out.print("¿Qué nombre quieres ponerle?: ");
+		Nombre2 = scan.next();
+		File filerename = new File(path+File.separator+Nombre2+".txt");
+		boolean correcto = myfile.renameTo(filerename);
+		if (!correcto) {
+			System.out.println("Error.");
+			main(null);
+		}
+		else
+			System.out.println("Nombre cambiado.");
 	}
 	public static void rpFile(String path) {
 		
