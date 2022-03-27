@@ -11,7 +11,7 @@ public class Ejercicio01 {
 		archivos.mkdir();					  // crea la carpeta
 		String local = System.getProperty("user.dir");
 		String path = local + File.separator + "archivos";
-		System.out.println(path);
+		//System.out.println(path);
 		do {
 			do {
 				imprimirMenu();
@@ -27,6 +27,10 @@ public class Ejercicio01 {
 				dlFile(path);
 			if(opElegida == 5)
 				rnFile(path);
+			if(opElegida == 6)
+				rpFile(path);
+			if(opElegida == 0)
+				System.exit(0);
 		}while(opElegida != 0);
 	}
 	
@@ -50,7 +54,6 @@ public class Ejercicio01 {
 	public static String pideNombre() {
 		Scanner sc=new Scanner(System.in);
 		System.out.print("Introduce un nombre para el archivo: ");
-		String name = sc.next();
 		return (name);
 	}
 
@@ -133,7 +136,32 @@ public class Ejercicio01 {
 		else
 			System.out.println("Nombre cambiado.");
 	}
-	public static void rpFile(String path) {
-		
+	public static void rpFile(String path) throws IOException {
+		String[] pnames = listFiles(path);
+		int a = 0;
+		int b = 0;
+		String sust;
+		System.out.print("¿Qué archivo quieres modificar?: ");
+		Scanner scan = new Scanner(System.in);
+		Scanner scen = new Scanner(System.in);
+		a = scan.nextInt() -1;
+		if(a+1 > pnames.length) {
+			System.out.println("Ha ocurrido un error.");
+			main(null);
+		}
+		RandomAccessFile raf = new RandomAccessFile(path+File.separator+pnames[a], "rw");
+		System.out.print("¿Qué posicion quieres reemplazar?: ");
+		b = scan.nextInt() -1;
+		if (b > raf.length() ) {
+			System.out.println("Ha ocurrido un error.");
+			main(null);
+		}
+		else{
+			raf.seek(b);
+			System.out.print("¿Qué quieres poner en esa posición?: ");
+			sust = scen.nextLine();
+			raf.writeBytes(sust);
+			raf.close();
+		}
 	}
 }
