@@ -53,7 +53,9 @@ public class Ejercicio01 {
 	
 	public static String pideNombre() {
 		Scanner sc=new Scanner(System.in);
+		String name;
 		System.out.print("Introduce un nombre para el archivo: ");
+		name = sc.nextLine();
 		return (name);
 	}
 
@@ -66,7 +68,6 @@ public class Ejercicio01 {
 		System.out.print("¿Qué quiere introducir en el archivo?: ");
 		Scanner scan = new Scanner(System.in);
 		txt = scan.nextLine();
-		System.out.println(txt);
 		BufferedWriter out = new BufferedWriter(new FileWriter(path+File.separator+nmbre+".txt", true));
 		out.write(txt);
 		out.close();
@@ -110,10 +111,10 @@ public class Ejercicio01 {
 		numero = scan.nextInt() - 1;
 		Nombre = pnames[numero];
 		File myfile = new File(path+File.separator+Nombre);
-		if(myfile.delete())
+		//if(myfile.delete())										Aqui habia incluido una forma de ver si habia error al borrar
 	         System.out.println("Archivo borrado exitosamente");
-	      else
-	         System.out.println("Algo ha salido mal");
+	    //  else													Pero no me lo piden
+	    //     System.out.println("Algo ha salido mal");			
 	}
 	public static void rnFile(String path) throws IOException {
 		String Nombre;
@@ -122,11 +123,12 @@ public class Ejercicio01 {
 		String[] pnames = listFiles(path);
 		System.out.print("¿Que archivo quieres renombrar?: ");
 		Scanner scan = new Scanner(System.in);
+		Scanner scen = new Scanner(System.in);
 		numero = scan.nextInt() - 1;
 		Nombre = pnames[numero];
 		File myfile = new File(path+File.separator+Nombre);
 		System.out.print("¿Qué nombre quieres ponerle?: ");
-		Nombre2 = scan.next();
+		Nombre2 = scen.nextLine();
 		File filerename = new File(path+File.separator+Nombre2+".txt");
 		boolean correcto = myfile.renameTo(filerename);
 		if (!correcto) {
