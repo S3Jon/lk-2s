@@ -5,7 +5,7 @@ public class Musico extends Artista{
     private String ultimoDisco;
     private String[] topCanciones = new String[10];
 
-    public Musico(String dni, String nombre, int anyo, String sex, String sitioWeb, String ultimoDisco ) {
+    public Musico(String dni, String nombre, int anyo, char sex, String sitioWeb, String ultimoDisco ) {
         super(dni, nombre, anyo, sex);
         this.sitioWeb = sitioWeb;
         this.ultimoDisco = ultimoDisco;
