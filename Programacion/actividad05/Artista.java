@@ -29,7 +29,7 @@ public class Artista {
 	}
 
 	public void setDNI(String DNI) {
-		DNI = DNI;
+		this.DNI = DNI;
 	}
 
 	public void setNombre(String nombre) {
