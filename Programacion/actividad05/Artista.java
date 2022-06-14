@@ -28,8 +28,8 @@ public class Artista {
 		return "Artista [DNI=" + DNI + ", nombre=" + nombre + ", anyo=" + anyo + ", sex=" + sex + "]";
 	}
 
-	public void setDNI(String dNI) {
-		DNI = dNI;
+	public void setDNI(String DNI) {
+		DNI = DNI;
 	}
 
 	public void setNombre(String nombre) {
@@ -43,5 +43,4 @@ public class Artista {
 	public void setSex(char sex) {
 		this.sex = sex;
 	}
-
 }
